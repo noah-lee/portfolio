@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-import { ReactComponent as Icon } from "../assets/icon.svg";
-
-import { H3 } from "../styles/StyledComponents";
+import { H2 } from "../styles/StyledComponents";
 
 const Hero = () => {
   const me = {
@@ -12,24 +10,18 @@ const Hero = () => {
 
   return (
     <Wrapper>
-      {/* <Icon
-        fill="var(--color-white)"
-        stroke="var(--color-white)"
-        height={192}
-        width={192}
-      /> */}
-      <H3>
+      <H2>
         <White>Hello</White> 👋
-      </H3>
-      <H3>
+      </H2>
+      <H2>
         I'm <Red>Noah</Red>
-      </H3>
-      <H3>
-        a <Aqua>Web🌐 Developer</Aqua>
-      </H3>
-      <H3>
+      </H2>
+      <H2>
+        a <Aqua>Web Developer</Aqua> 🌐
+      </H2>
+      <H2>
         from <White>Canada</White> 🍁
-      </H3>
+      </H2>
       <Links>
         <svg height={48} width={120}>
           <line
@@ -52,7 +44,7 @@ const Hero = () => {
 };
 
 const Wrapper = styled.section`
-  padding: 128px 0;
+  height: calc(100vh - 96px);
 
   display: flex;
   flex-direction: column;

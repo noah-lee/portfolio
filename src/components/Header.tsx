@@ -21,13 +21,14 @@ const Wrapper = styled.header`
   height: 96px;
   width: 100%;
 
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
-const Left = styled.div``;
+const Left = styled.div`
+  
+`;
 
 const Right = styled.div`
   display: flex;
