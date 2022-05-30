@@ -57,14 +57,13 @@ export default createGlobalStyle`
   /* Global Styles */
 
   :root {
-    --color-main: #dd7a5f;
-    --color-main-light: #ffa06d;
-    --color-main-dark: #904f3e;
+    --color-aqua: #7eddd3;
+    --color-red: #c46474;
 
-    --color-white: #fff9db;
-    --color-light: #e0d7c1;
-    --color-dark: #5f4c41;
-    --color-black: #120e0c;
+    --color-white: #e3e6eb;
+    --color-light: #54585c;
+    --color-dark: #2d2e30;
+    --color-black: #101010;
 
     /* --vs-code-background: #1e1e1e;
     --vs-code-blue: #569ccb;
@@ -76,7 +75,7 @@ export default createGlobalStyle`
 
   body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--color-light);
-    color: var(--color-dark);
+    background-color: var(--color-dark);
+    color: var(--color-white);
   }
 `;
