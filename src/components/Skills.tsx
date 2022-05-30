@@ -26,7 +26,7 @@ const Skills = () => {
       <Container>
         <Skill>
           <SiHtml5 color="#e56027" />
-          HTML
+          <p>HTML</p>
         </Skill>
         <Skill>
           <SiCss3 color="#279fd5" />

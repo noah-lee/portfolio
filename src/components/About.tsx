@@ -4,7 +4,7 @@ import { H3, P } from "../styles/StyledComponents";
 import { ReactComponent as Icon } from "../assets/icon.svg";
 import device from "../utils/breakpoints";
 
-const AboutMe = () => {
+const About = () => {
   const ICON_SIZE = 256;
   const ICON_COLOR = "var(--color-white)";
 
@@ -63,4 +63,4 @@ const Text = styled(P)`
   background-color: var(--color-light);
 `;
 
-export default AboutMe;
+export default About;

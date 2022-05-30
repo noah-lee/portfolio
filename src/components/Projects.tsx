@@ -1,9 +1,49 @@
 import styled from "styled-components";
 
-import { H3, H4, P } from "../styles/StyledComponents";
+import Project from "./Project";
+import { H3, P } from "../styles/StyledComponents";
 import device from "../utils/breakpoints";
+import similify from "../assets/similify.png";
+import cryptobot from "../assets/cryptobot.png";
+import synthle from "../assets/synthle.png";
+import openaichatbot from "../assets/openaichatbot.png";
 
 const Projects = () => {
+  const projects = [
+    {
+      name: "🎵 similify",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas integer eget.",
+      image: similify,
+      isLive: true,
+      liveLink: "https://similify.netlify.app/",
+    },
+    {
+      name: "🪙 cryptocurrency trading bot",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas integer eget.",
+      image: cryptobot,
+      isLive: false,
+      liveLink: "",
+    },
+    {
+      name: "🎹 synthle",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas integer eget.",
+      image: synthle,
+      isLive: true,
+      liveLink: "https://synthle.netlify.app/",
+    },
+    {
+      name: "💬 openai chatbot",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas integer eget.",
+      image: openaichatbot,
+      isLive: true,
+      liveLink: "https://openai-chatbot.netlify.app/",
+    },
+  ];
+
   return (
     <Wrapper>
       <H3>projects</H3>
@@ -13,12 +53,15 @@ const Projects = () => {
         integer eget.
       </Text>
       <Container>
-        <Project>
-          <H4>Similify</H4>
-        </Project>
-        <Project>Hi</Project>
-        <Project>Hi</Project>
-        <Project>Hi</Project>
+        {projects.map((project) => (
+          <Project
+            name={project.name}
+            description={project.description}
+            image={project.image}
+            isLive={project.isLive}
+            liveLink={project.liveLink}
+          />
+        ))}
       </Container>
     </Wrapper>
   );
@@ -45,12 +88,6 @@ const Container = styled.div`
     flex-direction: column;
     width: 100%;
   }
-`;
-
-const Project = styled.div`
-  background-color: var(--color-light);
-  height: 480px;
-  /* padding: 16px; */
 `;
 
 export default Projects;
