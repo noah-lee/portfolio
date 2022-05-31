@@ -17,7 +17,7 @@ import device from "../utils/breakpoints";
 const Skills = () => {
   return (
     <Wrapper>
-      <H3>skills</H3>
+      <H3>inside my toolbox</H3>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas

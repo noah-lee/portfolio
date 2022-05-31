@@ -5,7 +5,7 @@ import { H3, P } from "../styles/StyledComponents";
 const Contact = () => {
   return (
     <Wrapper>
-      <H3>contact me</H3>
+      <H3>let's continue the conversation</H3>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas

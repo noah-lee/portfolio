@@ -8,7 +8,9 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Contact from './components/Contact';
+import Contact from "./components/Contact";
+import Extra from "./components/Extra";
+import Footer from "./components/Footer";
 
 import device from "./utils/breakpoints";
 
@@ -22,8 +24,10 @@ const App: FC = () => {
         <About />
         <Skills />
         <Projects />
+        <Extra />
         <Contact />
       </Main>
+      <Footer />
     </Wrapper>
   );
 };

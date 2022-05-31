@@ -10,7 +10,7 @@ const About = () => {
 
   return (
     <Wrapper>
-      <H3>about me</H3>
+      <H3>a little bit about myself</H3>
       <Container>
         <Icon
           fill={ICON_COLOR}

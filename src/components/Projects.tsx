@@ -46,7 +46,7 @@ const Projects = () => {
 
   return (
     <Wrapper>
-      <H3>projects</H3>
+      <H3>what i've made</H3>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas

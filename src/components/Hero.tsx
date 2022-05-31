@@ -32,12 +32,12 @@ const Hero = () => {
             style={{ stroke: "var(--color-light)", strokeWidth: "4px" }}
           />
         </svg>
-        <Link target="_blank" href="https://github.com/noah-lee">
+        <HeroLink target="_blank" href="https://github.com/noah-lee">
           <FaGithub size={32} />
-        </Link>
-        <Link target="_blank" href="https://www.linkedin.com/in/noahlee1/t">
+        </HeroLink>
+        <HeroLink target="_blank" href="https://www.linkedin.com/in/noahlee1/">
           <FaLinkedin size={32} />
-        </Link>
+        </HeroLink>
       </Links>
     </Wrapper>
   );
@@ -69,7 +69,7 @@ const Links = styled.div`
   gap: 32px;
 `;
 
-const Link = styled.a`
+const HeroLink = styled.a`
   color: inherit;
 
   &:hover {
