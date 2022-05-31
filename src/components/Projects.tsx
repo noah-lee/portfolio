@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import Project from "./Project";
-import { H3, P } from "../styles/StyledComponents";
+import { Section, H3, P } from "../styles/StyledComponents";
 import device from "../utils/breakpoints";
 import similify from "../assets/similify.png";
 import cryptobot from "../assets/cryptobot.png";
@@ -45,7 +45,7 @@ const Projects = () => {
   ];
 
   return (
-    <Wrapper>
+    <Section>
       <H3>what i've made</H3>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -55,6 +55,7 @@ const Projects = () => {
       <Container>
         {projects.map((project) => (
           <Project
+            key={project.name}
             name={project.name}
             description={project.description}
             image={project.image}
@@ -63,13 +64,9 @@ const Projects = () => {
           />
         ))}
       </Container>
-    </Wrapper>
+    </Section>
   );
 };
-
-const Wrapper = styled.section`
-  padding: 32px 0;
-`;
 
 const Text = styled(P)`
   margin-top: 32px;
@@ -83,7 +80,7 @@ const Container = styled.div`
   justify-content: space-between;
   gap: 64px;
 
-  @media only screen and ${device.desktop} {
+  @media ${device.desktop} {
     display: flex;
     flex-direction: column;
     width: 100%;

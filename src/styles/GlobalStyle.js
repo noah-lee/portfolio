@@ -61,9 +61,9 @@ export default createGlobalStyle`
     --color-red: #c46474;
 
     --color-white: #e3e6eb;
-    --color-light: #54585c;
+    --color-light: #99a1a8;
     --color-dark: #2d2e30;
-    --color-black: #101010;
+    --color-black: #252728;
 
     /* --vs-code-background: #1e1e1e;
     --vs-code-blue: #569ccb;

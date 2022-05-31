@@ -2,15 +2,16 @@ import styled from "styled-components";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 import { H4, P } from "../styles/StyledComponents";
-import { FC } from "react";
 
-const Project: FC<{
+type ProjectType = {
   name: string;
   description: string;
   image: string;
   isLive: boolean;
   liveLink: string;
-}> = ({ name, description, image, isLive, liveLink }) => {
+}
+
+const Project = ({ name, description, image, isLive, liveLink }: ProjectType) => {
   return (
     <Wrapper>
       <Img src={image} />
@@ -63,7 +64,7 @@ const TitleLink = styled.a`
 
 const LearnMoreLink = styled.a`
   padding: 16px;
-  background-color: var(--color-light);
+  background-color: var(--color-black);
   border-radius: 16px;
   align-self: flex-start;
 

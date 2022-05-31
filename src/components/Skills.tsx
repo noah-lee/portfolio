@@ -11,12 +11,12 @@ import {
   SiGit,
 } from "react-icons/si";
 
-import { H3, P } from "../styles/StyledComponents";
+import { Section, H3, P } from "../styles/StyledComponents";
 import device from "../utils/breakpoints";
 
 const Skills = () => {
   return (
-    <Wrapper>
+    <Section>
       <H3>inside my toolbox</H3>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -61,13 +61,9 @@ const Skills = () => {
           Git
         </Skill>
       </Container>
-    </Wrapper>
+    </Section>
   );
 };
-
-const Wrapper = styled.section`
-  padding: 32px 0;
-`;
 
 const Text = styled(P)`
   margin-top: 32px;
@@ -81,7 +77,7 @@ const Container = styled.ul`
   justify-content: space-between;
   gap: 32px;
 
-  @media only screen and ${device.tablet} {
+  @media ${device.tablet} {
     justify-content: center;
   }
 `;
@@ -89,7 +85,7 @@ const Container = styled.ul`
 const Skill = styled.li`
   padding: 16px;
   border-radius: 16px;
-  background-color: var(--color-light);
+  background-color: var(--color-black);
 
   display: flex;
   align-items: center;

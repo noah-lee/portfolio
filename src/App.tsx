@@ -9,7 +9,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Extra from "./components/Extra";
+import Extras from "./components/Extras";
 import Footer from "./components/Footer";
 
 import device from "./utils/breakpoints";
@@ -24,7 +24,7 @@ const App: FC = () => {
         <About />
         <Skills />
         <Projects />
-        <Extra />
+        <Extras />
         <Contact />
       </Main>
       <Footer />

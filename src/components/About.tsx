@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { H3, P } from "../styles/StyledComponents";
+import { Section, H3, P } from "../styles/StyledComponents";
 
 import { ReactComponent as Icon } from "../assets/icon.svg";
 import device from "../utils/breakpoints";
@@ -9,7 +9,7 @@ const About = () => {
   const ICON_COLOR = "var(--color-white)";
 
   return (
-    <Wrapper>
+    <Section>
       <H3>a little bit about myself</H3>
       <Container>
         <Icon
@@ -18,7 +18,7 @@ const About = () => {
           height={ICON_SIZE}
           width={ICON_SIZE}
         />
-        <Text>
+        <AboutText>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis
           egestas integer eget. Turpis nunc eget lorem dolor sed viverra ipsum
@@ -27,15 +27,11 @@ const About = () => {
           vulputate. Magna etiam tempor orci eu lobortis elementum nibh. Egestas
           dui id ornare arcu odio ut sem nulla. Id porta nibh venenatis cras sed
           felis eget velit aliquet.
-        </Text>
+        </AboutText>
       </Container>
-    </Wrapper>
+    </Section>
   );
 };
-
-const Wrapper = styled.section`
-  padding: 32px 0;
-`;
 
 const Container = styled.div`
   margin-top: 64px;
@@ -48,7 +44,7 @@ const Container = styled.div`
     flex: 0.5;
   }
 
-  @media only screen and ${device.laptop} {
+  @media ${device.laptop} {
     flex-direction: column;
     gap: 64px;
     > * {
@@ -57,10 +53,11 @@ const Container = styled.div`
   }
 `;
 
-const Text = styled(P)`
+const AboutText = styled(P)`
   padding: 32px;
   border-radius: 24px;
-  background-color: var(--color-light);
+  color: var(--color-white);
+  background-color: var(--color-black);
 `;
 
 export default About;

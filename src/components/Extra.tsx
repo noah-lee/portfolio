@@ -1,61 +1,99 @@
+import { ReactElement } from "react";
 import styled from "styled-components";
 
-import { H3, P } from "../styles/StyledComponents";
+import { H4, P } from "../styles/StyledComponents";
+import device from "../utils/breakpoints";
 
-const Extra = () => {
-  const musicGridTemplate = `"left left center center right right"
-  "left left center center right right"`;
+type ExtraType = {
+  name: string;
+  description: string;
+  images: [string, string];
+  links: { icon: ReactElement; url: string }[];
+  isReverse: boolean;
+};
 
+const test: string = device.laptop;
+
+const Extra = ({ name, description, images, links, isReverse }: ExtraType) => {
   return (
-    <Wrapper>
-      <H3>when i'm not coding</H3>
-      <Container>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis
-          egestas integer eget.
-        </Text>
-        <Grid
-          style={{
-            gridTemplate: musicGridTemplate,
-          }}
-        >
-          <Box style={{ backgroundColor: "red" }} area="left" />
-          <Box style={{ backgroundColor: "blue" }} area="center" />
-          <Box style={{ backgroundColor: "yellow" }} area="right" />
-        </Grid>
-      </Container>
+    <Wrapper isReverse={isReverse} laptop={device.laptop}>
+      <TextDiv>
+        <H4>{name}</H4>
+        <P>{description}</P>
+        {!!links.length && (
+          <Links>
+            <svg height={48} width={96}>
+              <line
+                x1={0}
+                x2={96}
+                y1={24}
+                y2={24}
+                style={{ stroke: "var(--color-light)", strokeWidth: "4px" }}
+              />
+            </svg>
+            {links.map((link) => (
+              <SocialLink key={link.url} target="_blank" href={link.url}>
+                {link.icon}
+              </SocialLink>
+            ))}
+          </Links>
+        )}
+      </TextDiv>
+      {images.map((image) => (
+        <ImgDiv key={image}>
+          <Img src={image} />
+        </ImgDiv>
+      ))}
     </Wrapper>
   );
 };
 
-const Wrapper = styled.section`
-  padding: 32px 0;
+const Wrapper = styled.div<{ isReverse: boolean; laptop: string }>`
+  margin-top: 64px;
+
+  display: flex;
+  flex-direction: ${({ isReverse }) => (isReverse ? "row-reverse" : "row")};
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+
+  > * {
+    flex: calc(1 / 3);
+  }
+
+  @media ${device.laptop} {
+    flex-direction: column;
+  }
 `;
 
-const Container = styled.div`
-  margin-top: 32px;
-  height: 256px;
+const TextDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
 
+const Links = styled.div`
   display: flex;
   align-items: center;
   gap: 32px;
 `;
 
-const Text = styled(P)`
-  flex: 30%;
+const SocialLink = styled.a`
+  color: inherit;
+  height: 32px;
+
+  &:hover {
+    color: var(--color-red);
+  }
 `;
 
-const Grid = styled.div`
-  flex: 70%;
-  height: 100%;
+const ImgDiv = styled.div``;
 
-  display: grid;
-  gap: 32px;
-`;
-
-const Box = styled.div<{ area: string }>`
-  grid-area: ${({ area }) => area};
+const Img = styled.img`
+  width: 100%;
+  max-width: 512px;
+  border-radius: 8px;
 `;
 
 export default Extra;

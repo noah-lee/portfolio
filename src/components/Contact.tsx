@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import { H3, P } from "../styles/StyledComponents";
+import { Section, H3, P } from "../styles/StyledComponents";
 
 const Contact = () => {
   return (
-    <Wrapper>
+    <Section>
       <H3>let's continue the conversation</H3>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -18,13 +18,9 @@ const Contact = () => {
         <MessageArea id="message" />
         <EmailSubmitBtn>Send</EmailSubmitBtn>
       </EmailForm>
-    </Wrapper>
+    </Section>
   );
 };
-
-const Wrapper = styled.section`
-  padding: 32px 0;
-`;
 
 const Text = styled(P)`
   margin-top: 32px;
