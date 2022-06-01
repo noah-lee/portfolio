@@ -29,7 +29,7 @@ const Projects = () => {
     {
       name: "🎹 synthle",
       description:
-        "Learning sound design does not need to be complicated. Synthle is a fully featured web synthesizer that is free and beginner friendly. Curious about the controls? Hover over and get a quick tooltip! Built with React and Web Audio API.",
+        "Learning sound design doesn't need to be complicated. Synthle is a fully featured web synthesizer that is free and beginner friendly. Curious about what anything does? Hover over and get a quick tooltip! Built with React and Web Audio API.",
       image: synthle,
       isLive: true,
       liveLink: "https://synthle.netlify.app/",
@@ -49,9 +49,9 @@ const Projects = () => {
       <H3>what i've made</H3>
       <Text>
         Working on personal passion projects has been my favorite way to learn.
-        I take inspiration from my own struggles and build applications to
-        simplify. Whether it's shortening a time-consuming task or helping teach
-        a difficult tool, I want to provide value to as many as possible.
+        When building applications, I take inspiration from my own struggles.
+        Whether it's shortening a time-consuming task or helping teach a
+        difficult tool, I want to simplify and help others.
       </Text>
       <Container>
         {projects.map((project) => (

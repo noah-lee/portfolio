@@ -57,11 +57,7 @@ const Wrapper = styled.div<{ isReverse: boolean; laptop: string }>`
   justify-content: space-between;
   align-items: center;
   gap: 32px;
-
-  /* > * {
-    flex: calc(1 / 3);
-  } */
-
+  
   @media ${device.laptop} {
     flex-direction: column;
   }

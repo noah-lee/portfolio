@@ -43,7 +43,7 @@ const Extras = () => {
     {
       name: "keyboard designer",
       description:
-        "Custom mechanical keyboards are where my creativity can take physical form. I design everything from the electric schematic and Printed Circuit Board (PCB) to the physical plate and case. I have worked with local and international manufacturers for small batch production. As a work in progress, I hope to one day start my own keyboard brand.",
+        "Custom mechanical keyboards are where my creativity can take physical form. I design everything from the electric schematic and Printed Circuit Board (PCB), to the physical plate and case. I have worked with local and international manufacturers for small batch production. As a work in progress, I hope to one day start my own keyboard brand.",
       images: [keyboards, design],
       links: [],
       isReverse: true,

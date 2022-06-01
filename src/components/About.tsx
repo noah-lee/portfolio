@@ -43,7 +43,7 @@ const About = () => {
           </P> */}
           <P>
             My journey into software and web development has been an arduous
-            one. I studied <Aqua>mechanical engineering</Aqua> at McGill
+            one. I completed my <Aqua>mechanical engineering</Aqua> degree in 2015 at McGill
             University and since, I have worked 6+ years as an{" "}
             <Aqua>acoustic engineer</Aqua>.
           </P>
