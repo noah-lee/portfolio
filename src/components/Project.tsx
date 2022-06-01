@@ -9,12 +9,17 @@ type ProjectType = {
   image: string;
   isLive: boolean;
   liveLink: string;
-}
+};
 
-const Project = ({ name, description, image, isLive, liveLink }: ProjectType) => {
+const Project = ({
+  name,
+  description,
+  image,
+  isLive,
+  liveLink,
+}: ProjectType) => {
   return (
     <Wrapper>
-      <Img src={image} />
       {isLive ? (
         <TitleLink href={liveLink} target="_blank">
           <H4>{name}</H4>
@@ -23,6 +28,7 @@ const Project = ({ name, description, image, isLive, liveLink }: ProjectType) =>
       ) : (
         <H4>{name}</H4>
       )}
+      <Img src={image} />
       <P>{description}</P>
       {/* <LearnMoreLink>
         <p>Learn more</p>

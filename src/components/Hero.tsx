@@ -17,10 +17,10 @@ const Hero = () => {
         I'm <Red>Noah</Red>
       </H2>
       <H2>
-        a <Aqua>Web Developer</Aqua> 🌐
+        a <Aqua>Web Developer</Aqua>
       </H2>
       <H2>
-        from <White>Canada</White> 🍁
+        from <White>Canada</White>
       </H2>
       <Links>
         <svg height={48} width={120}>
