@@ -15,49 +15,59 @@ import { Section, H3, P } from "../styles/StyledComponents";
 import device from "../utils/breakpoints";
 
 const Skills = () => {
+  const skills = [
+    {
+      name: "HTML",
+      icon: <SiHtml5 color="#e56027" />,
+    },
+    {
+      name: "CSS",
+      icon: <SiCss3 color="#279fd5" />,
+    },
+    {
+      name: "JavaScript",
+      icon: <SiJavascript color="#e4b423" />,
+    },
+    {
+      name: "TypeScript",
+      icon: <SiTypescript color="#0074c2" />,
+    },
+    {
+      name: "React",
+      icon: <SiReact color="#5ccfee" />,
+    },
+    {
+      name: "Node.js",
+      icon: <SiNodedotjs color="#7cc327" />,
+    },
+    {
+      name: "Express",
+      icon: <SiExpress />,
+    },
+    {
+      name: "MongoDB",
+      icon: <SiMongodb color="#66a344" />,
+    },
+    {
+      name: "Git",
+      icon: <SiGit color="#e44d30" />,
+    },
+  ];
+
   return (
     <Section>
       <H3>inside my toolbox</H3>
       <Text>
-        This is an evergrowing list of tools I have acquired through the bootcamp and personal projects.
+        This is an evergrowing list of tools I have acquired through the
+        bootcamp and personal projects.
       </Text>
       <Container>
-        <Skill>
-          <SiHtml5 color="#e56027" />
-          <p>HTML</p>
-        </Skill>
-        <Skill>
-          <SiCss3 color="#279fd5" />
-          CSS
-        </Skill>
-        <Skill>
-          <SiJavascript color="#e4b423" />
-          JavaScript
-        </Skill>
-        <Skill>
-          <SiTypescript color="#0074c2" />
-          TypeScript
-        </Skill>
-        <Skill>
-          <SiReact color="#5ccfee" />
-          React
-        </Skill>
-        <Skill>
-          <SiNodedotjs color="#7cc327" />
-          Node.js
-        </Skill>
-        <Skill>
-          <SiExpress />
-          Express
-        </Skill>
-        <Skill>
-          <SiMongodb color="#66a344" />
-          MongDB
-        </Skill>
-        <Skill>
-          <SiGit color="#e44d30" />
-          Git
-        </Skill>
+        {skills.map((skill) => (
+          <Skill key={skill.name}>
+            {skill.icon}
+            <p>{skill.name}</p>
+          </Skill>
+        ))}
       </Container>
     </Section>
   );

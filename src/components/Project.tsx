@@ -24,9 +24,9 @@ const Project = ({ name, description, image, isLive, liveLink }: ProjectType) =>
         <H4>{name}</H4>
       )}
       <P>{description}</P>
-      <LearnMoreLink>
+      {/* <LearnMoreLink>
         <p>Learn more</p>
-      </LearnMoreLink>
+      </LearnMoreLink> */}
     </Wrapper>
   );
 };

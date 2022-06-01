@@ -9,9 +9,9 @@ const Header = () => {
         <H1>noah lee</H1>
       </Left>
       <Right>
+        {/* <p>Links</p>
         <p>Links</p>
-        <p>Links</p>
-        <p>Links</p>
+        <p>Links</p> */}
       </Right>
     </Wrapper>
   );
