@@ -41,9 +41,9 @@ const Contact = () => {
       </Text>
       <EmailForm onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
-        <EmailInput type="email" id="email" name="email" />
+        <EmailInput type="email" id="email" name="email" required={true} />
         <label htmlFor="message">Message</label>
-        <MessageArea id="message" name="message" />
+        <MessageArea id="message" name="message" required={true} />
         <EmailSubmitBtn>Send</EmailSubmitBtn>
       </EmailForm>
     </Section>
