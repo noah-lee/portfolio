@@ -22,7 +22,7 @@ const Extras = () => {
     {
       name: "music producer",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Acturpis egestas integer eget.",
+        "I am a long time bedroom music producer and guitarist. In 2020, I decided to open an ecommerce store to sell my music and related services. My proudest accomplishments so far have been reaching over 2 million streams working with talented artists and turning my passion into a profitable side business during the pandemic.",
       images: [guitar, studio],
       links: [
         {
@@ -41,9 +41,9 @@ const Extras = () => {
       isReverse: false,
     },
     {
-      name: "keyboad designer",
+      name: "keyboard designer",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Acturpis egestas integer eget.",
+        "Custom mechanical keyboards are where my creativity can take physical form. I design everything from the electric schematic and Printed Circuit Board (PCB) to the physical plate and case. I have worked with local and international manufacturers for small batch production. As a work in progress, I hope to one day start my own keyboard brand.",
       images: [keyboards, design],
       links: [],
       isReverse: true,

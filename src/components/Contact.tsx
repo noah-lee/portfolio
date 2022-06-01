@@ -7,9 +7,8 @@ const Contact = () => {
     <Section>
       <H3>let's continue the conversation</H3>
       <Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas
-        integer eget.
+        Are you looking for a developer? Are you curious about my awesome projects? I would love to connect and chat! I'm also always eager to
+        geek out about music production and keyboards 🙂
       </Text>
       <EmailForm>
         <label htmlFor="email">Email</label>
@@ -74,6 +73,6 @@ const EmailSubmitBtn = styled.button`
     color: var(--color-dark);
     cursor: pointer;
   }
-`
+`;
 
 export default Contact;

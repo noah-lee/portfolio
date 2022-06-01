@@ -19,9 +19,7 @@ const Skills = () => {
     <Section>
       <H3>inside my toolbox</H3>
       <Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas
-        integer eget.
+        This is an evergrowing list of tools I have acquired through the bootcamp and personal projects.
       </Text>
       <Container>
         <Skill>

@@ -13,7 +13,7 @@ const Projects = () => {
     {
       name: "🎵 similify",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas integer eget.",
+        "Find similar music with BPM and key filters using Similify. Built to help musicians and DJs find inspiration and reference tracks. Full-stack client-server web application built with React, Node.js and Express, and powered by Spotify API.",
       image: similify,
       isLive: true,
       liveLink: "https://similify.netlify.app/",
@@ -21,7 +21,7 @@ const Projects = () => {
     {
       name: "🪙 cryptocurrency trading bot",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas integer eget.",
+        "Automated cryptocurrency trading bot leveraging RESTful and Web Socket API connection to exchanges (NDAX, FTX). Optimized to reduce API requests and avoid exceeding API rate limits. Built with Node.js.",
       image: cryptobot,
       isLive: false,
       liveLink: "",
@@ -29,7 +29,7 @@ const Projects = () => {
     {
       name: "🎹 synthle",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas integer eget.",
+        "Learning sound design does not need to be complicated. Synthle is a fully featured web synthesizer that is free and beginner friendly. Curious about the controls? Hover over and get a quick tooltip! Built with React and Web Audio API.",
       image: synthle,
       isLive: true,
       liveLink: "https://synthle.netlify.app/",
@@ -37,7 +37,7 @@ const Projects = () => {
     {
       name: "💬 openai chatbot",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas integer eget.",
+        "Want to know what it feels like to chat with a friendly AI? This chatbot is configured to simulate a conversation with a friend. Curie, daVinci, Babbage and Ada are waiting for you to start a conversation! Built with React and OpenAI API.",
       image: openaichatbot,
       isLive: true,
       liveLink: "https://openai-chatbot.netlify.app/",
@@ -48,9 +48,10 @@ const Projects = () => {
     <Section>
       <H3>what i've made</H3>
       <Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas
-        integer eget.
+        Working on personal passion projects has been my favorite way to learn.
+        I take inspiration from my own struggles and build applications to
+        simplify. Whether it's shortening a time-consuming task or helping teach
+        a difficult tool, I want to provide value to as many as possible.
       </Text>
       <Container>
         {projects.map((project) => (

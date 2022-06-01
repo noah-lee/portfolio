@@ -58,9 +58,9 @@ const Wrapper = styled.div<{ isReverse: boolean; laptop: string }>`
   align-items: center;
   gap: 32px;
 
-  > * {
+  /* > * {
     flex: calc(1 / 3);
-  }
+  } */
 
   @media ${device.laptop} {
     flex-direction: column;
@@ -68,6 +68,8 @@ const Wrapper = styled.div<{ isReverse: boolean; laptop: string }>`
 `;
 
 const TextDiv = styled.div`
+  flex: 0.4;
+
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -88,7 +90,9 @@ const SocialLink = styled.a`
   }
 `;
 
-const ImgDiv = styled.div``;
+const ImgDiv = styled.div`
+  flex: 0.3;
+`;
 
 const Img = styled.img`
   width: 100%;
