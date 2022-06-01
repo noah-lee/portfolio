@@ -43,15 +43,15 @@ const About = () => {
           </P> */}
           <P>
             My journey into software and web development has been an arduous
-            one. I completed my <Aqua>mechanical engineering</Aqua> degree in 2015 at McGill
-            University and since, I have worked 6+ years as an{" "}
+            one. I completed my <Aqua>mechanical engineering</Aqua> degree in
+            2015 at McGill University and since, I have worked 6+ years as an{" "}
             <Aqua>acoustic engineer</Aqua>.
           </P>
           <P>
             In 2021, I started learning programming casually in order to
             automate a tedious task. This rapidly grew into a desire to learn
-            more. Finally, with the encouragement of my friends, I decided to go
-            through a <Aqua>career change</Aqua>.
+            more. Finally, with the encouragement of my friends, I decided to
+            make a <Aqua>career change</Aqua>.
           </P>
           <P>
             To begin my journey, I completed a{" "}
