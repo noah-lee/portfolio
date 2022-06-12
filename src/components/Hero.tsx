@@ -1,20 +1,17 @@
-import styled from "styled-components";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import React from 'react';
+import styled from 'styled-components';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-import { H2 } from "../styles/StyledComponents";
+import { H2 } from '../styles/StyledComponents';
 
-const Hero = () => {
-  const me = {
-    name: "Noah Lee",
-  };
-
+const Hero: React.FC = () => {
   return (
     <Wrapper>
       <H2>
         <White>Hello</White> 👋
       </H2>
       <H2>
-        I'm <Red>Noah</Red>
+        I&apos;m <Red>Noah</Red>
       </H2>
       <H2>
         a <Aqua>Web Developer</Aqua>
@@ -29,7 +26,7 @@ const Hero = () => {
             x2={120}
             y1={24}
             y2={24}
-            style={{ stroke: "var(--color-light)", strokeWidth: "4px" }}
+            style={{ stroke: 'var(--color-light)', strokeWidth: '4px' }}
           />
         </svg>
         <HeroLink target="_blank" href="https://github.com/noah-lee">

@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 import {
   SiHtml5,
   SiCss3,
@@ -9,47 +10,47 @@ import {
   SiExpress,
   SiMongodb,
   SiGit,
-} from "react-icons/si";
+} from 'react-icons/si';
 
-import { Section, H3, P } from "../styles/StyledComponents";
-import device from "../utils/breakpoints";
+import { Section, H3, P } from '../styles/StyledComponents';
+import device from '../utils/breakpoints';
 
 const Skills = () => {
   const skills = [
     {
-      name: "HTML",
+      name: 'HTML',
       icon: <SiHtml5 color="#e56027" />,
     },
     {
-      name: "CSS",
+      name: 'CSS',
       icon: <SiCss3 color="#279fd5" />,
     },
     {
-      name: "JavaScript",
+      name: 'JavaScript',
       icon: <SiJavascript color="#e4b423" />,
     },
     {
-      name: "TypeScript",
+      name: 'TypeScript',
       icon: <SiTypescript color="#0074c2" />,
     },
     {
-      name: "React",
+      name: 'React',
       icon: <SiReact color="#5ccfee" />,
     },
     {
-      name: "Node.js",
+      name: 'Node.js',
       icon: <SiNodedotjs color="#7cc327" />,
     },
     {
-      name: "Express",
+      name: 'Express',
       icon: <SiExpress />,
     },
     {
-      name: "MongoDB",
+      name: 'MongoDB',
       icon: <SiMongodb color="#66a344" />,
     },
     {
-      name: "Git",
+      name: 'Git',
       icon: <SiGit color="#e44d30" />,
     },
   ];

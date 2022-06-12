@@ -1,7 +1,8 @@
-import styled from "styled-components";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import React from 'react';
+import styled from 'styled-components';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
-import { H4, P } from "../styles/StyledComponents";
+import { H4, P } from '../styles/StyledComponents';
 
 type ProjectType = {
   name: string;

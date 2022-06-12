@@ -1,8 +1,9 @@
-import { ReactElement } from "react";
-import styled from "styled-components";
+import React from 'react';
+import { ReactElement } from 'react';
+import styled from 'styled-components';
 
-import { H4, P } from "../styles/StyledComponents";
-import device from "../utils/breakpoints";
+import { H4, P } from '../styles/StyledComponents';
+import device from '../utils/breakpoints';
 
 type ExtraType = {
   name: string;
@@ -11,8 +12,6 @@ type ExtraType = {
   links: { icon: ReactElement; url: string }[];
   isReverse: boolean;
 };
-
-const test: string = device.laptop;
 
 const Extra = ({ name, description, images, links, isReverse }: ExtraType) => {
   return (
@@ -28,7 +27,7 @@ const Extra = ({ name, description, images, links, isReverse }: ExtraType) => {
                 x2={96}
                 y1={24}
                 y2={24}
-                style={{ stroke: "var(--color-light)", strokeWidth: "4px" }}
+                style={{ stroke: 'var(--color-light)', strokeWidth: '4px' }}
               />
             </svg>
             {links.map((link) => (
@@ -52,12 +51,12 @@ const Wrapper = styled.div<{ isReverse: boolean; laptop: string }>`
   margin-top: 64px;
 
   display: flex;
-  flex-direction: ${({ isReverse }) => (isReverse ? "row-reverse" : "row")};
+  flex-direction: ${({ isReverse }) => (isReverse ? 'row-reverse' : 'row')};
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 32px;
-  
+
   @media ${device.laptop} {
     flex-direction: column;
   }

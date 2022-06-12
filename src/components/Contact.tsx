@@ -1,8 +1,9 @@
-import emailjs from "emailjs-com";
-import { FormEvent } from "react";
-import styled from "styled-components";
+import React from 'react';
+import emailjs from 'emailjs-com';
+import { FormEvent } from 'react';
+import styled from 'styled-components';
 
-import { Section, H3, P } from "../styles/StyledComponents";
+import { Section, H3, P } from '../styles/StyledComponents';
 
 const Contact = () => {
   const handleSubmit = (ev: FormEvent<HTMLFormElement>) => {
@@ -12,16 +13,16 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_36nptov",
-        "template_jbl42yc",
+        'service_36nptov',
+        'template_jbl42yc',
         form,
-        "AZXuxeTjR5FK_vNbA"
+        'AZXuxeTjR5FK_vNbA'
       )
       .then(
         (result) => {
           form.reset();
           window.alert(
-            "Thank you for your message! I will get back to you shorly 🙌"
+            'Thank you for your message! I will get back to you shorly 🙌'
           );
           console.log(result.text);
         },
@@ -33,11 +34,11 @@ const Contact = () => {
 
   return (
     <Section>
-      <H3>let's continue the conversation</H3>
+      <H3>let&apos;s continue the conversation</H3>
       <Text>
         Are you looking for a developer? Are you curious about my awesome
-        projects? I would love to connect and chat! I'm also always eager to
-        geek out about music production and keyboards 🙂
+        projects? I would love to connect and chat! I&apos;m also always eager
+        to geek out about music production and keyboards 🙂
       </Text>
       <EmailForm onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>

@@ -1,20 +1,20 @@
-import { FC } from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import GlobalStyle from "./styles/GlobalStyle";
+import GlobalStyle from './styles/GlobalStyle';
 
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Extras from "./components/Extras";
-import Footer from "./components/Footer";
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Extras from './components/Extras';
+import Footer from './components/Footer';
 
-import device from "./utils/breakpoints";
+import device from './utils/breakpoints';
 
-const App: FC = () => {
+const App: React.FC = () => {
   return (
     <Wrapper>
       <GlobalStyle />
@@ -42,11 +42,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media only screen and ${device.tablet} {
+  @media ${device.tablet} {
     padding: 0 32px;
   }
 
-  @media only screen and ${device.mobile} {
+  @media ${device.mobile} {
     padding: 0 16px;
   }
 `;

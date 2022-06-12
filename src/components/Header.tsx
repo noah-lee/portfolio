@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { H1 } from "../styles/StyledComponents";
+import { H1 } from '../styles/StyledComponents';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <Wrapper>
       <Left>
@@ -26,9 +27,7 @@ const Wrapper = styled.header`
   align-items: center;
 `;
 
-const Left = styled.div`
-  
-`;
+const Left = styled.div``;
 
 const Right = styled.div`
   display: flex;
