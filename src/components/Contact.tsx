@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com';
 import { FormEvent } from 'react';
 import styled from 'styled-components';
 
-import { Section, H3, P } from '../styles/StyledComponents';
+import { Section, H2, P } from '../styles/Styles';
 
 const Contact = () => {
   const handleSubmit = (ev: FormEvent<HTMLFormElement>) => {
@@ -34,11 +34,11 @@ const Contact = () => {
 
   return (
     <Section>
-      <H3>let&apos;s continue the conversation</H3>
+      <H2>{"let's continue the conversation"}</H2>
       <Text>
-        Are you looking for a developer? Are you curious about my awesome
-        projects? I would love to connect and chat! I&apos;m also always eager
-        to geek out about music production and keyboards 🙂
+        {
+          "Are you looking for a developer? Are you curious about my awesome projects? I would love to connect and chat! I'm also always eager to geek out about music production and keyboards 🙂"
+        }
       </Text>
       <EmailForm onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
@@ -63,7 +63,7 @@ const EmailForm = styled.form`
 `;
 
 const EmailInput = styled.input`
-  height: 1rem;
+  height: 2rem;
   padding: 8px;
   border: none;
   border-radius: 8px;

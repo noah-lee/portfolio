@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { H1 } from '../styles/StyledComponents';
+import { H1 } from '../styles/Styles';
 
 const Header: React.FC = () => {
   return (
     <Wrapper>
-      <Left>
+      <Start>
         <H1>noah lee</H1>
-      </Left>
-      <Right>
+      </Start>
+      <End>
         {/* <p>Links</p>
         <p>Links</p>
         <p>Links</p> */}
-      </Right>
+      </End>
     </Wrapper>
   );
 };
@@ -27,9 +27,9 @@ const Wrapper = styled.header`
   align-items: center;
 `;
 
-const Left = styled.div``;
+const Start = styled.div``;
 
-const Right = styled.div`
+const End = styled.div`
   display: flex;
   gap: 32px;
 `;

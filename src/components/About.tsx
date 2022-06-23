@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Section, H3, P } from '../styles/StyledComponents';
+import { Section, H2, P } from '../styles/Styles';
 
 import { ReactComponent as Icon } from '../assets/icon.svg';
 import device from '../utils/breakpoints';
 
-const About = () => {
+const About: React.FC = () => {
   const ICON_SIZE = 256;
   const ICON_COLOR = 'var(--color-white)';
 
   return (
     <Section>
-      <H3>a little bit about myself</H3>
+      <H2>a little bit about myself</H2>
       <Container>
         <Icon
           fill={ICON_COLOR}
@@ -19,7 +19,7 @@ const About = () => {
           height={ICON_SIZE}
           width={ICON_SIZE}
         />
-        <AboutText>
+        <AboutContainer>
           <P>
             My journey into software and web development has been an arduous
             one. I completed my <Aqua>mechanical engineering</Aqua> degree in
@@ -46,7 +46,7 @@ const About = () => {
             <Aqua>self-motivated, curious and passionate</Aqua> developer to
             join your team, look no further!
           </P>
-        </AboutText>
+        </AboutContainer>
       </Container>
     </Section>
   );
@@ -72,7 +72,7 @@ const Container = styled.div`
   }
 `;
 
-const AboutText = styled.div`
+const AboutContainer = styled.div`
   padding: 32px;
   border-radius: 24px;
   color: var(--color-white);

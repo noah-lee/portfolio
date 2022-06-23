@@ -2,32 +2,32 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-import { H4, P } from '../styles/StyledComponents';
+import { H3, P } from '../styles/Styles';
 
-type ProjectType = {
+interface Props {
   name: string;
   description: string;
   image: string;
   isLive: boolean;
   liveLink: string;
-};
+}
 
-const Project = ({
+const Project: React.FC<Props> = ({
   name,
   description,
   image,
   isLive,
   liveLink,
-}: ProjectType) => {
+}) => {
   return (
     <Wrapper>
       {isLive ? (
-        <TitleLink href={liveLink} target="_blank">
-          <H4>{name}</H4>
+        <LiveLink href={liveLink} target="_blank">
+          <H3>{name}</H3>
           <FaExternalLinkAlt />
-        </TitleLink>
+        </LiveLink>
       ) : (
-        <H4>{name}</H4>
+        <H3>{name}</H3>
       )}
       <Img src={image} />
       <P>{description}</P>
@@ -53,7 +53,7 @@ const Img = styled.img`
   align-self: center;
 `;
 
-const TitleLink = styled.a`
+const LiveLink = styled.a`
   align-self: flex-start;
 
   text-decoration: none;
@@ -64,22 +64,22 @@ const TitleLink = styled.a`
   gap: 16px;
 
   &:hover {
-    color: var(--color-red);
+    color: var(--color-aqua);
     cursor: pointer;
   }
 `;
 
-const LearnMoreLink = styled.a`
-  padding: 16px;
-  background-color: var(--color-black);
-  border-radius: 16px;
-  align-self: flex-start;
+// const LearnMoreLink = styled.a`
+//   padding: 16px;
+//   background-color: var(--color-black);
+//   border-radius: 16px;
+//   align-self: flex-start;
 
-  &:hover {
-    background-color: var(--color-aqua);
-    color: var(--color-dark);
-    cursor: pointer;
-  }
-`;
+//   &:hover {
+//     background-color: var(--color-aqua);
+//     color: var(--color-dark);
+//     cursor: pointer;
+//   }
+// `;
 
 export default Project;

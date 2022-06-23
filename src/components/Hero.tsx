@@ -2,24 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-import { H2 } from '../styles/StyledComponents';
-
 const Hero: React.FC = () => {
   return (
     <Wrapper>
-      <H2>
+      <Text>
         <White>Hello</White> 👋
-      </H2>
-      <H2>
-        I&apos;m <Red>Noah</Red>
-      </H2>
-      <H2>
+      </Text>
+      <Text>
+        {"I'm "}
+        <Red>Noah</Red>
+      </Text>
+      <Text>
         a <Aqua>Web Developer</Aqua>
-      </H2>
-      <H2>
+      </Text>
+      <Text>
         from <White>Canada</White>
-      </H2>
-      <Links>
+      </Text>
+      <LinkContainer>
         <svg height={48} width={120}>
           <line
             x1={0}
@@ -29,13 +28,13 @@ const Hero: React.FC = () => {
             style={{ stroke: 'var(--color-light)', strokeWidth: '4px' }}
           />
         </svg>
-        <HeroLink target="_blank" href="https://github.com/noah-lee">
+        <Link target="_blank" href="https://github.com/noah-lee">
           <FaGithub size={32} />
-        </HeroLink>
-        <HeroLink target="_blank" href="https://www.linkedin.com/in/noahlee1/">
+        </Link>
+        <Link target="_blank" href="https://www.linkedin.com/in/noahlee1/">
           <FaLinkedin size={32} />
-        </HeroLink>
-      </Links>
+        </Link>
+      </LinkContainer>
     </Wrapper>
   );
 };
@@ -46,6 +45,13 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`;
+
+const Text = styled.p`
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: bold;
+  color: var(--color-light);
 `;
 
 const White = styled.span`
@@ -60,13 +66,13 @@ const Red = styled.span`
   color: var(--color-red);
 `;
 
-const Links = styled.div`
+const LinkContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 32px;
 `;
 
-const HeroLink = styled.a`
+const Link = styled.a`
   color: inherit;
 
   &:hover {

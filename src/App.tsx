@@ -1,32 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import GlobalStyle from './styles/GlobalStyle';
+import CssReset from './styles/Reset';
+import GlobalStyle from './styles/Styles';
+import device from './utils/breakpoints';
 
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Extras from './components/Extras';
+import Main from './components/Main';
 import Footer from './components/Footer';
-
-import device from './utils/breakpoints';
 
 const App: React.FC = () => {
   return (
     <Wrapper>
+      <CssReset />
       <GlobalStyle />
       <Header />
-      <Main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Extras />
-        <Contact />
-      </Main>
+      <Main />
       <Footer />
     </Wrapper>
   );
@@ -49,10 +38,6 @@ const Wrapper = styled.div`
   @media ${device.mobile} {
     padding: 0 16px;
   }
-`;
-
-const Main = styled.main`
-  width: 100%;
 `;
 
 export default App;

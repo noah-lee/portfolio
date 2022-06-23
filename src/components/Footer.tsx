@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-import { P } from '../styles/StyledComponents';
+import { P } from '../styles/Styles';
 
 const Footer = () => {
   return (

@@ -2,25 +2,31 @@ import React from 'react';
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 
-import { H4, P } from '../styles/StyledComponents';
+import { H3, P } from '../styles/Styles';
 import device from '../utils/breakpoints';
 
-type ExtraType = {
+interface Props {
   name: string;
   description: string;
   images: [string, string];
   links: { icon: ReactElement; url: string }[];
   isReverse: boolean;
-};
+}
 
-const Extra = ({ name, description, images, links, isReverse }: ExtraType) => {
+const Extra: React.FC<Props> = ({
+  name,
+  description,
+  images,
+  links,
+  isReverse,
+}) => {
   return (
     <Wrapper isReverse={isReverse} laptop={device.laptop}>
-      <TextDiv>
-        <H4>{name}</H4>
+      <TextContainer>
+        <H3>{name}</H3>
         <P>{description}</P>
         {!!links.length && (
-          <Links>
+          <LinkContainer>
             <svg height={48} width={96}>
               <line
                 x1={0}
@@ -31,17 +37,17 @@ const Extra = ({ name, description, images, links, isReverse }: ExtraType) => {
               />
             </svg>
             {links.map((link) => (
-              <SocialLink key={link.url} target="_blank" href={link.url}>
+              <Link key={link.url} target="_blank" href={link.url}>
                 {link.icon}
-              </SocialLink>
+              </Link>
             ))}
-          </Links>
+          </LinkContainer>
         )}
-      </TextDiv>
+      </TextContainer>
       {images.map((image) => (
-        <ImgDiv key={image}>
+        <ImgContainer key={image}>
           <Img src={image} />
-        </ImgDiv>
+        </ImgContainer>
       ))}
     </Wrapper>
   );
@@ -62,7 +68,7 @@ const Wrapper = styled.div<{ isReverse: boolean; laptop: string }>`
   }
 `;
 
-const TextDiv = styled.div`
+const TextContainer = styled.div`
   flex: 0.4;
 
   display: flex;
@@ -70,13 +76,13 @@ const TextDiv = styled.div`
   gap: 16px;
 `;
 
-const Links = styled.div`
+const LinkContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 32px;
 `;
 
-const SocialLink = styled.a`
+const Link = styled.a`
   color: inherit;
   height: 32px;
 
@@ -85,7 +91,7 @@ const SocialLink = styled.a`
   }
 `;
 
-const ImgDiv = styled.div`
+const ImgContainer = styled.div`
   flex: 0.3;
 `;
 
