@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { Section, H2, P } from '../styles/Styles';
 
 import { ReactComponent as Icon } from '../assets/icon.svg';
 import device from '../utils/breakpoints';
 
+import useInView from '../hooks/use-in-view.hooks';
+
 const About: React.FC = () => {
   const ICON_SIZE = 256;
   const ICON_COLOR = 'var(--color-white)';
 
+  const [titleRef, titleInView] = useInView();
+
   return (
     <Section>
-      <H2>a little bit about myself</H2>
+      <H2 ref={titleRef}>a little bit about myself</H2>
       <Container>
         <Icon
           fill={ICON_COLOR}
